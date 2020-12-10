@@ -1,0 +1,20 @@
+
+
+.coin {
+  position: relative;
+  width: 200px;
+  display: grid;
+  place-items: center;
+}
+
+.amount {
+  position: absolute;
+  font-size: 4rem;
+  color: black;
+  right: 20px;
+  bottom: -80px;
+}
+
+.coin_img {
+  width: 150px; 
+}
