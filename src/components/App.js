@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Dinero from "../../node_modules/dinero.js";
 import Input from "./Input";
 import Coin from "./Coin";
 import styles from "./App.module.css";
 import quarterSvg from "../svgs/quarter2.svg";
-import dimeSvg from '../svgs/dime.svg';
-import nickelSvg from '../svgs/nickel5.svg';
-import pennySvg from '../svgs/penny.svg';
+import dimeSvg from "../svgs/dime.svg";
+import nickelSvg from "../svgs/nickel5.svg";
+import pennySvg from "../svgs/penny.svg";
 
 const App = () => {
   const [cents, setCents] = useState(0);
@@ -77,25 +76,16 @@ const App = () => {
     console.log(centsToCoins(cents));
   }, [cents]);
 
-  const formatDollarsToCents = function (value) {
-    value = (value + "").replace(/[^\d.-]/g, "");
-    if (value && value.includes(".")) {
-      value = value.substring(0, value.indexOf(".") + 3);
-    }
-
-    return value ? Math.round(parseFloat(value) * 100) : 0;
-  };
-
   return (
     <div className={styles.container}>
-    <h2 className={styles.title}>cents to coin</h2>
+      <h2 className={styles.title}>cents to coin</h2>
       <Input setCents={setCents} />
       <h2 className={styles.totalCents}>total cents: {cents}</h2>
       <div className={styles.coin_container}>
-      <Coin coin="quarter" amount={coinType.quarter} image={quarterSvg} />
-      <Coin coin="dime" amount={coinType.dime} image={dimeSvg} />
-      <Coin coin="nickel" amount={coinType.nickel} image={nickelSvg} />
-      <Coin coin="penny" amount={coinType.penny} image={pennySvg} />
+        <Coin coin="quarter" amount={coinType.quarter} image={quarterSvg} />
+        <Coin coin="dime" amount={coinType.dime} image={dimeSvg} />
+        <Coin coin="nickel" amount={coinType.nickel} image={nickelSvg} />
+        <Coin coin="penny" amount={coinType.penny} image={pennySvg} />
       </div>
       <footer className={styles.footer}>created by oscar</footer>
     </div>

@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-
-import logo from "../imgs/dollar.png";
 import styles from "./Input.module.css";
 
 const Input = ({ setCents }) => {
@@ -30,22 +28,21 @@ const Input = ({ setCents }) => {
   };
 
   const onHandleInputChange = (e) => {
-    let regex = /^(\d+)?([.]?\d{0,2})?$/; 
-    let value = e.target.value; 
-    if(value === ""  || regex.test(value)) {
-      setDollar(value); 
+    let regex = /^(\d+)?([.]?\d{0,2})?$/;
+    let value = e.target.value;
+    if (value === "" || regex.test(value)) {
+      setDollar(value);
     }
-  }
+  };
 
   return (
     <div className={styles.container}>
-     
-      <input disabled  className={styles.fake_input} value="$" />
+      <input disabled className={styles.fake_input} value="$" />
       <input
         className={styles.input}
         placeholder="0.00"
         type="text"
-        maxLength='12'
+        maxLength="12"
         value={dollar}
         onChange={onHandleInputChange}
       />
