@@ -2,22 +2,24 @@
   width: 80%;
   padding: 0;
   display: grid;
-  grid-template-columns: 0.1fr 1fr;
+  grid-template-columns: 0.2fr 1fr;
   align-items: center;
+  justify-content: center;
   grid-row: 2/3;
 }
 
-.logo {
+/* .logo {
   width: 90px;
-  height: 130px;
-}
+  height: 140px;
+} */
 
 .fake_input {
   font-size: 6rem;
   border: none;
-  width: 60px;
+  width: 100%;
   grid-column: 1/2;
   outline: none;
+  text-align: center;
 }
 
 .fake_input:disabled {
@@ -27,6 +29,7 @@
 
 .input {
   width: 100%;
+  max-width: 700px;
   font-size: 5rem;
   border-top: none;
   border-left: none;
@@ -39,12 +42,12 @@
 
 @media (max-width: 600px) {
   .container {
-    width: 95%;
+    width: 70%;
     grid-template-columns: 0.2fr 1fr;
   }
   .fake_input {
-    font-size: 3rem;
-    width: 100%;
+    font-size: 2rem;
+    text-align: center;
   }
 
   .input {

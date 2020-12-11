@@ -78,9 +78,10 @@ const App = () => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>cents to coin</h2>
+      <h2 className={styles.title}>
+        c <span className={styles.span}>to</span> c
+      </h2>
       <Input setCents={setCents} />
-      <h2 className={styles.totalCents}>total cents: {cents}</h2>
       <div className={styles.coin_container}>
         <Coin coin="quarter" amount={coinType.quarter} image={quarterSvg} />
         <Coin coin="dime" amount={coinType.dime} image={dimeSvg} />

@@ -4,6 +4,8 @@ import styles from "./Input.module.css";
 const Input = ({ setCents }) => {
   const [dollar, setDollar] = useState("");
 
+  console.log(dollar);
+
   useEffect(() => {
     const timerId = setTimeout(() => {
       const onChangeValue = () => {
@@ -24,7 +26,9 @@ const Input = ({ setCents }) => {
       value = value.substring(0, value.indexOf(".") + 3);
     }
 
-    return value ? Math.round(parseFloat(value) * 100) : 0;
+    return value ? Math.round(parseFloat(value) * 1) : 0;
+
+    // times by 100 to get dollars
   };
 
   const onHandleInputChange = (e) => {
@@ -42,7 +46,7 @@ const Input = ({ setCents }) => {
         className={styles.input}
         placeholder="0.00"
         type="text"
-        maxLength="12"
+        maxLength="2"
         value={dollar}
         onChange={onHandleInputChange}
       />
