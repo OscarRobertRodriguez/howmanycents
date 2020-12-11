@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import Input from "./Input";
 import Coin from "./Coin";
 import styles from "./App.module.css";
-import quarterSvg from "../svgs/quarter2.svg";
-import dimeSvg from "../svgs/dime.svg";
-import nickelSvg from "../svgs/nickel5.svg";
-import pennySvg from "../svgs/penny.svg";
+import quarterSvg from "../svgs/quarter.png";
+import dimeSvg from "../svgs/dime.png";
+import nickelSvg from "../svgs/nickel.png";
+import pennySvg from "../svgs/penny.png";
 
 const App = () => {
   const [cents, setCents] = useState(0);

@@ -1,5 +1,3 @@
-
-
 .coin {
   position: relative;
   width: 200px;
@@ -11,10 +9,10 @@
   position: absolute;
   font-size: 4rem;
   color: black;
-  right: 20px;
+  right: 35px;
   bottom: -80px;
 }
 
 .coin_img {
-  width: 150px; 
+  width: 100px;
 }
